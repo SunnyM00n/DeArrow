@@ -1,0 +1,127 @@
+{
+  "name": "__MSG_deArrowFullName__",
+  "short_name": "DeArrow",
+  "version": "2.0.2",
+  "default_locale": "en",
+  "description": "__MSG_deArrowDescription__",
+  "homepage_url": "https://dearrow.ajay.app",
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "alarms",
+    "scripting"
+  ],
+  "icons": {
+    "16": "icons/logo-16.png",
+    "32": "icons/logo-32.png",
+    "64": "icons/logo-64.png",
+    "128": "icons/logo-128.png",
+    "256": "icons/logo-256.png",
+    "512": "icons/logo-512.png",
+    "1024": "icons/logo-1024.png"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "world": "MAIN",
+      "js": [
+        "./js/document.js"
+      ],
+      "matches": [
+        "https://*.youtube.com/*",
+        "https://www.youtube-nocookie.com/embed/*"
+      ],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons/refresh.svg",
+        "icons/logo.svg",
+        "js/document.js",
+        "js/options.js",
+        "js/popup.js",
+        "popup.css",
+        "shared.css",
+        "help.html",
+        "help.css",
+        "icons/logo-16.png",
+        "icons/logo-32.png",
+        "icons/logo-64.png",
+        "icons/logo-128.png",
+        "icons/logo-256.png",
+        "icons/logo-2r.svg",
+        "icons/logo-casual.svg",
+        "icons/close.png",
+        "icons/add.svg",
+        "icons/remove.svg"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "https://sponsor.ajay.app/*",
+    "https://dearrow-thumb.ajay.app/*",
+    "https://dearrow.ajay.app/*",
+    "https://*.youtube.com/*",
+    "https://www.youtube-nocookie.com/embed/*"
+  ],
+  "action": {
+    "default_title": "DeArrow",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/logo-16.png",
+      "32": "icons/logo-32.png",
+      "64": "icons/logo-64.png",
+      "128": "icons/logo-128.png"
+    },
+    "theme_icons": [
+      {
+        "light": "icons/logo-16.png",
+        "dark": "icons/logo-16.png",
+        "size": 16
+      },
+      {
+        "light": "icons/logo-32.png",
+        "dark": "icons/logo-32.png",
+        "size": 32
+      },
+      {
+        "light": "icons/logo-64.png",
+        "dark": "icons/logo-64.png",
+        "size": 64
+      },
+      {
+        "light": "icons/logo-128.png",
+        "dark": "icons/logo-128.png",
+        "size": 128
+      },
+      {
+        "light": "icons/logo-256.png",
+        "dark": "icons/logo-256.png",
+        "size": 256
+      },
+      {
+        "light": "icons/logo-512.png",
+        "dark": "icons/logo-512.png",
+        "size": 512
+      },
+      {
+        "light": "icons/logo-1024.png",
+        "dark": "icons/logo-1024.png",
+        "size": 1024
+      }
+    ]
+  },
+  "background": {
+    "service_worker": "./js/background.js"
+  },
+  "manifest_version": 3
+}

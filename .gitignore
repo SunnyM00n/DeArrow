@@ -4,7 +4,6 @@ ignored
 node_modules
 web-ext-artifacts
 .vscode/
-dist/
 tmp/
 .DS_Store
 ci/data.json
