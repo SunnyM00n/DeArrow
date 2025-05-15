@@ -1,0 +1,19 @@
+{
+    "serverAddress": "https://dearrow.ajay.app",
+    "thumbnailServerAddress": "https://dearrow-thumb.ajay.app",
+    "testingServerAddress": "https://dearrow.ajay.app/test",
+    "debug": false,
+    "extensionImportList": {
+        "chromium": [
+            "placeholder",
+            "placeholder"
+        ],
+        "firefox": [
+            "sponsorBlocker@floger.app",
+            "sponsorBlockerBETA@floger.app"
+        ],
+        "safari": [
+            "app.floger.sponsor.macos.extension"
+        ]
+    }
+}
