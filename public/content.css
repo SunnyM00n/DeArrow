@@ -248,7 +248,7 @@ ytd-compact-playlist-renderer .ytd-compact-playlist-renderer #video-title:not(.c
 .cbTitlePreviewBox {
     border: rgb(152, 152, 152) 1.2px solid;
     border-radius: 5px;
-    font-family: "YouTube Sans", "Roboto", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 600;
 
     margin-top: 0;
