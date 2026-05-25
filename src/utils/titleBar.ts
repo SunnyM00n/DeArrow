@@ -89,7 +89,7 @@ export async function getOrCreateTitleButtonContainer(forceTitleNode?: HTMLEleme
                             if (!chrome.runtime?.id) return; // Extension context invalidated
 
                             // Now the description with a second title element will be shown
-                            const selector = ".primary-info .title, ytd-video-description-header-renderer #shorts-title";
+                            const selector = ".primary-info .header-title, ytd-video-description-header-renderer #shorts-title";
 
                             // If it already exists, this menu is about to be closed on mobile
                             if (!onMobile() || !document.querySelector(selector)) {

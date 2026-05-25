@@ -164,7 +164,7 @@ function getPossibleSelectors(onWatchPage: boolean, onEmbedPage: boolean, onChan
                     checkVisibility: true
                 },
                 {
-                    selector: ".primary-info .title",
+                    selector: ".primary-info .header-title",
                     checkVisibility: false
                 }
             ];
