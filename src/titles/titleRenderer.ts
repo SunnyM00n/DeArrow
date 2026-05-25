@@ -333,7 +333,7 @@ function getTitleSelector(brandingLocation: BrandingLocation): string[] {
                     ".ShortsLockupViewModelHostMetadataTitle .yt-core-attributed-string", // New desktop shorts
                     ".shortsLockupViewModelHostMetadataTitle .yt-core-attributed-string", // New desktop shorts
                     ".details .media-item-headline .yt-core-attributed-string", // Mobile YouTube
-                    ".details .media-item-headline .ytAttributedStringHost", // 2026 April Mobile YouTube
+                    ".media-item-headline .ytAttributedStringHost", // 2026 April Mobile YouTube
                     ".reel-item-metadata h3 .yt-core-attributed-string", // Mobile YouTube Shorts
                     ".details > .yt-core-attributed-string", // Mobile YouTube Channel Feature
                     ".details > .ytAttributedStringHost", // 2026 April Mobile YouTube Channel Feature
