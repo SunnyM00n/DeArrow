@@ -194,7 +194,8 @@ export class TitleButton {
     }
 
     private getPageTextColor(): string | undefined {
-        return getComputedStyle(document.querySelector("ytd-watch-metadata")!)?.color;
+        const element = document.querySelector("ytd-watch-metadata");
+        return getComputedStyle(element || document.body)?.color;
     }
 
     // eslint-disable-next-line @typescript-eslint/no-empty-function
