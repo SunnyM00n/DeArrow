@@ -292,7 +292,7 @@ ytd-compact-playlist-renderer .ytd-compact-playlist-renderer #video-title:not(.c
     margin-top: 3em;
 	background-color: rgba(28, 28, 28, 0.9);
     backdrop-filter: blur(10px);
-    --cb-main-text-color: white;
+    --cb-main-text-color: white !important;
 
     width: var(--ytd-watch-flexy-sidebar-width, 400px);
     margin-left: auto;
