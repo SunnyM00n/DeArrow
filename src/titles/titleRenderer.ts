@@ -1,4 +1,4 @@
-import { VideoID, getVideoID } from "../../maze-utils/src/video";
+import { VideoID, getVideoID, isOnMobileYouTube } from "../../maze-utils/src/video";
 import Config, { TitleFormatting } from "../config/config";
 import { getVideoTitleIncludingUnsubmitted } from "../dataFetching";
 import { logError } from "../utils/logger";
@@ -24,6 +24,7 @@ let lastWatchVideoID: VideoID | null = null;
 let lastUrlWatchPageType: WatchPageType | null = null;
 
 export async function replaceTitle(element: HTMLElement, videoID: VideoID, showCustomBranding: ShowCustomBrandingInfo, brandingLocation: BrandingLocation): Promise<boolean> {
+    await waitForOriginalTitleElementReady(element, brandingLocation)
     const originalTitleElement = getOriginalTitleElement(element, brandingLocation);
 
     if (!Config.config!.extensionEnabled || shouldReplaceTitlesFastCheck(videoID) === false) {
@@ -299,9 +300,24 @@ function setCustomTitle(title: string, element: HTMLElement, brandingLocation: B
     }
 }
 
+async function waitForOriginalTitleElementReady(element: HTMLElement, brandingLocation: BrandingLocation) {
+    if (isOnMobileYouTube()) {
+        const selector = getOriginalTitleElementSelector(element, brandingLocation);
+        await waitFor(() => element.querySelector(selector));
+
+        return true;
+    } else {
+        return true;
+    }
+}
+
+export function getOriginalTitleElementSelector(element: HTMLElement, brandingLocation: BrandingLocation) {
+    return getTitleSelector(brandingLocation)
+        .map((s) => `${s}:not(.cbCustomTitle)`).join(", ");
+}
+
 export function getOriginalTitleElement(element: HTMLElement, brandingLocation: BrandingLocation) {
-    return element.querySelector(getTitleSelector(brandingLocation)
-        .map((s) => `${s}:not(.cbCustomTitle)`).join(", ")) as HTMLElement;
+    return element.querySelector(getOriginalTitleElementSelector(element, brandingLocation)) as HTMLElement;
 }
 
 function getTitleSelector(brandingLocation: BrandingLocation): string[] {

@@ -284,8 +284,8 @@ export function getLinkElement(element: HTMLElement, brandingLocation: BrandingL
                     return null;
                 }
             } else {
-                // Big thumbnails, compact thumbnails, shorts, channel feature, playlist header
-                return element.querySelector("a.media-item-thumbnail-container, a.compact-media-item-image, a.reel-item-endpoint, :scope > a, .ytPageHeaderViewModelHeadlineInfo  a.yt-spec-button-shape-next--overlay, a.YtmCompactMediaItemMetadataContent") as HTMLAnchorElement;
+                // Big thumbnails, compact thumbnails, shorts, channel feature, playlist header, 2026 april homepage
+                return element.querySelector("a.media-item-thumbnail-container, a.compact-media-item-image, a.reel-item-endpoint, :scope > a, .ytPageHeaderViewModelHeadlineInfo  a.yt-spec-button-shape-next--overlay, a.YtmCompactMediaItemMetadataContent, a.ytLockupViewModelContentImage") as HTMLAnchorElement;
             }
         case BrandingLocation.Endcards:
             return element.querySelector("a.ytp-ce-covering-overlay") as HTMLAnchorElement;
