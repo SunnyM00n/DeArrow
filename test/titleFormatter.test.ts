@@ -95,6 +95,7 @@ describe("toCapitalizeCase", () => {
         ["The quick brown fox jumps over the first-of-it's-kind is a sentence", "The Quick Brown Fox Jumps Over The First-Of-It's-Kind Is A Sentence"],
         ["The quick brown fox jumps over the first-of-it's-Kind is a sentence", "The Quick Brown Fox Jumps Over The First-Of-It's-Kind Is A Sentence"],
         ["The quick brown fox jumps over the first-of-it's-kInd is a sentence", "The Quick Brown Fox Jumps Over The First-Of-It's-Kind Is A Sentence"],
+        ["Ballot initiatives in L.A. and S.F. are aiming to close the massive pay gap between CEOs and their workers", "Ballot Initiatives In L.A. And S.F. Are Aiming To Close The Massive Pay Gap Between CEOs And Their Workers"]
     ];
     for (const testCase of capitalizeCases) {
         const [input, expected] = testCase;
