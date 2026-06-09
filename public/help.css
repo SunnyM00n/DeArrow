@@ -38,7 +38,7 @@ html {
 
 body {
     background-color: var(--background);
-    font-family: sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .center {
